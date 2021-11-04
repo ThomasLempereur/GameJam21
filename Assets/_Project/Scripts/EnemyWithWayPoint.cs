@@ -12,7 +12,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private BoxCollider2D hitCollider;
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private Animator animator;
-
+    [SerializeField] private int damagePassif;
     private Transform target;
     private int destPoint;
 
@@ -47,7 +47,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<PlayerHealth>().TakeDamage(1);
+            collision.transform.GetComponent<PlayerHealth>().TakeDamage(damagePassif);
         }
     }
 

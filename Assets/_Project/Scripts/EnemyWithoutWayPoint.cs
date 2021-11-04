@@ -12,6 +12,7 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private BoxCollider2D hitCollider;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform target;
+    [SerializeField] private int damagePassif;
 
     // Start is called before the first frame update
     public void Start()
@@ -29,7 +30,7 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<PlayerHealth>().TakeDamage(1);
+            collision.transform.GetComponent<PlayerHealth>().TakeDamage(damagePassif);
         }
     }
 

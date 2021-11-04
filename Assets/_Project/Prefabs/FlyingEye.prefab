@@ -256,7 +256,7 @@ MonoBehaviour:
   attackRange: 0.7
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   animationTime: 0.2
 --- !u!60 &8665897638509260489
 PolygonCollider2D:
@@ -313,7 +313,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   objectDestroyed: {fileID: 7831612138009053057}
-  speed: 6
+  speed: 2
   enemyCollider2D: {fileID: 8665897638509260489}
   hitCollider: {fileID: 7831612137861899315}
   animator: {fileID: 7831612138046497278}
+  target: {fileID: 0}

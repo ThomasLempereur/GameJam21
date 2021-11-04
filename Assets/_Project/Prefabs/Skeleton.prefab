@@ -288,7 +288,7 @@ MonoBehaviour:
   attackRange: 1.4
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   animationTime: 0.2
 --- !u!60 &995689612370584717
 PolygonCollider2D:

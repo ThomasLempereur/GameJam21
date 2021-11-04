@@ -10,14 +10,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float isTouchedDelay;
     [SerializeField] private GameObject objectDestroyed;
     [SerializeField] private UnityEvent onDeath;
-   // [SerializeField] private HealthManagerProxy healthProxy;
+    [SerializeField] private HealthManagerProxy healthProxy;
 
     private int actualHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        //healthProxy.Reset();
+        healthProxy.Reset();
         isTouched = false;
     }
 
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
         isTouched = true;
 
-       // actualHealth = healthProxy.DecreaseUp(numberLostHearts);
+        actualHealth = healthProxy.DecreaseUp(numberLostHearts);
 
         Debug.Log(actualHealth);
 
@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer()
     {
-       // actualHealth = healthProxy.IncreaseUp();
+        actualHealth = healthProxy.IncreaseUp();
     }
 
     public IEnumerator invincibility()
@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator WaitAndDestroy()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         onDeath?.Invoke();
         Destroy(objectDestroyed);
     }
