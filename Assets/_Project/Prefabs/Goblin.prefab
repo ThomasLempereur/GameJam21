@@ -368,7 +368,7 @@ MonoBehaviour:
   objectDestroyed: {fileID: 7113668544284867895}
   speed: 4
   enemyCollider2D: {fileID: 7113668543105085090}
-  hitCollider: {fileID: 328516249}
+  hitCollider: {fileID: 2072033716}
   waypoints:
   - {fileID: 7113668542824947437}
   - {fileID: 7113668544210044587}
@@ -416,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7113668544210044586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.39, y: -2.27, z: 0}
+  m_LocalPosition: {x: 6.19, y: -2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7113668544284867892}
