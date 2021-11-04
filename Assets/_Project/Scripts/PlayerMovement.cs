@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         x = Input.GetAxisRaw("Horizontal");
+
         if (Input.GetButtonDown("Jump") && isGrounded) canJump = true;
 
         Flip(rb.velocity.x);
