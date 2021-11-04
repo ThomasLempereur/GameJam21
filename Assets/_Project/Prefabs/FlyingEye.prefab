@@ -143,10 +143,10 @@ GameObject:
   - component: {fileID: 7831612138046497279}
   - component: {fileID: 7831612138046497265}
   - component: {fileID: 7831612138046497278}
-  - component: {fileID: 6898735633993211771}
   - component: {fileID: 154685045919195286}
   - component: {fileID: 8665897638509260489}
-  m_Layer: 0
+  - component: {fileID: 1221809812}
+  m_Layer: 6
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,27 +239,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6898735633993211771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831612138046497276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd50db54c139a840b85e1fce12414a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  objectDestroyed: {fileID: 7831612138009053057}
-  speed: 6
-  enemyCollider2D: {fileID: 8665897638509260489}
-  hitCollider: {fileID: 7831612137861899315}
-  waypoints: []
-  animator: {fileID: 7831612138046497278}
 --- !u!114 &154685045919195286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,3 +297,23 @@ PolygonCollider2D:
       - {x: 0.185, y: -0.105}
       - {x: 0.205, y: -0.005}
       - {x: 0.205, y: 0.155}
+--- !u!114 &1221809812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831612138046497276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f3adbd8f7bc60498e5e11d0c21f770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  objectDestroyed: {fileID: 7831612138009053057}
+  speed: 6
+  enemyCollider2D: {fileID: 8665897638509260489}
+  hitCollider: {fileID: 7831612137861899315}
+  animator: {fileID: 7831612138046497278}

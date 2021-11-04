@@ -176,9 +176,9 @@ GameObject:
   - component: {fileID: 995689612370584714}
   - component: {fileID: 995689612370584715}
   - component: {fileID: 995689612370584719}
-  - component: {fileID: 995689612370584716}
   - component: {fileID: 995689612370584717}
-  m_Layer: 0
+  - component: {fileID: 611112291}
+  m_Layer: 6
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,29 +290,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   animationTime: 0.2
---- !u!114 &995689612370584716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995689612370584713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd50db54c139a840b85e1fce12414a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  objectDestroyed: {fileID: 995689612255420758}
-  speed: 2
-  enemyCollider2D: {fileID: 995689612370584717}
-  hitCollider: {fileID: 995689611834227488}
-  waypoints:
-  - {fileID: 995689611762307483}
-  - {fileID: 995689612554203744}
-  animator: {fileID: 995689612370584715}
 --- !u!60 &995689612370584717
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -353,6 +330,29 @@ PolygonCollider2D:
       - {x: -0.16499999, y: -0.105}
       - {x: -0.195, y: -0.255}
       - {x: 0.105, y: -0.255}
+--- !u!114 &611112291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995689612370584713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44a9630962659148ba1086392002bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  objectDestroyed: {fileID: 995689612255420758}
+  speed: 2
+  enemyCollider2D: {fileID: 995689612370584717}
+  hitCollider: {fileID: 995689611834227488}
+  waypoints:
+  - {fileID: 995689611762307483}
+  - {fileID: 995689612554203744}
+  animator: {fileID: 995689612370584715}
 --- !u!1 &995689612554203745
 GameObject:
   m_ObjectHideFlags: 0
