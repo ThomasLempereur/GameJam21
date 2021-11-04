@@ -17,6 +17,10 @@ public class EnemyAttack : MonoBehaviour
         {
             StartCoroutine(WaitEndOfAttackAnimation());
         }
+        else
+        {
+            animator.SetBool("isAttacking", false);
+        }
     }
 
     public void setRange(bool inRange)
