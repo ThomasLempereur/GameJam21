@@ -11,9 +11,7 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private PolygonCollider2D enemyCollider2D;
     [SerializeField] private BoxCollider2D hitCollider;
     [SerializeField] private Animator animator;
-
-    private Transform target;
-    private int destPoint;
+    [SerializeField] private Transform target;
 
     // Start is called before the first frame update
     public void Start()
@@ -23,15 +21,17 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     // Update is called once per frame
     public void Update()
     {
+        Vector3 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.GetComponent<PlayerHealth>().TakeDamage(1);
         }
-    }*/
+    }
 
     public void EnemyDeath()
     {
