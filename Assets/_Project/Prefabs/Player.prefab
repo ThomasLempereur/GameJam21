@@ -270,10 +270,10 @@ MonoBehaviour:
   animatorPlayer: {fileID: 5638838006338389349}
   rb: {fileID: 5638838006338389345}
   speed: 500
-  jumpForce: 20000
+  jumpForce: 25000
   collisionLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   spriteRenderer: {fileID: 5638838006338389374}
   groundCheckLeft: {fileID: 5638838004881294524}
   groundCheckRight: {fileID: 5638838004629831804}

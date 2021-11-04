@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour
+public class EnemyWithWayPoint : MonoBehaviour, IEnemy
 {
 
     [SerializeField] private UnityEvent onDeath;
@@ -17,13 +17,13 @@ public class Enemy : MonoBehaviour
     private int destPoint;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         target = waypoints[0];
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (!animator.GetBool("isDead") && !animator.GetBool("isAttacking"))
         {
@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(WaitAndDestroy());
     }
 
-    private IEnumerator WaitAndDestroy()
+    public IEnumerator WaitAndDestroy()
     {
         yield return new WaitForSeconds(1);
         onDeath?.Invoke();

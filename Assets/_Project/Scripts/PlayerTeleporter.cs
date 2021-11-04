@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerTeleport : MonoBehaviour
 {
@@ -15,7 +12,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         if (currentTeleporter != null)
         {
-            transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
+            transform.position = currentTeleporter.GetComponent<Teleporter>().GoToDestination().position;
         }
     }
 

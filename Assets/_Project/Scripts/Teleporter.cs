@@ -6,8 +6,10 @@ public class Teleporter : MonoBehaviour
 {
     [SerializeField] private Transform destination;
 
-    public Transform GetDestination()
+
+    public Transform GoToDestination()
     {
         return destination;
     }
+
 }
