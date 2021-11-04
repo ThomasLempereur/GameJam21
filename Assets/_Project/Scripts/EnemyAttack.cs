@@ -34,7 +34,7 @@ public class EnemyAttack : MonoBehaviour
 
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
 
-        //hit.GetComponent<PlayerHealth>().TakeDamage(2);
+        hit.GetComponent<PlayerHealth>().TakeDamage(2);
     }
 
     private IEnumerator WaitEndOfAttackAnimation()
