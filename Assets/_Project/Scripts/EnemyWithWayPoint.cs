@@ -42,7 +42,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
             }
         }
     }
-    /*
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -50,7 +50,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
             collision.transform.GetComponent<PlayerHealth>().TakeDamage(1);
         }
     }
-    */
+
     public void EnemyDeath()
     {
         animator.SetBool("isDead", true);
