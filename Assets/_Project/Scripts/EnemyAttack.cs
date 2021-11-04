@@ -8,6 +8,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float animationTime;
+    [SerializeField] private int damageActif;
     private bool _inRange;
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class EnemyAttack : MonoBehaviour
 
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
 
-        hit.GetComponent<PlayerHealth>().TakeDamage(2);
+        hit.GetComponent<PlayerHealth>().TakeDamage(damageActif);
     }
 
     private IEnumerator WaitEndOfAttackAnimation()

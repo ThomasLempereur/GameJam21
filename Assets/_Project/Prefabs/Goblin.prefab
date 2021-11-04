@@ -296,7 +296,7 @@ MonoBehaviour:
   attackRange: 0.9
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   animationTime: 0.2
 --- !u!114 &1588034147
 MonoBehaviour:

@@ -254,7 +254,7 @@ MonoBehaviour:
   attackRange: 1.5
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!114 &5638838006338389375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a7ce4af329d2b4e8c7f377ffa6ba5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graphics: {fileID: 0}
+  graphics: {fileID: 5638838006338389374}
   animator: {fileID: 5638838006338389349}
   isTouched: 0
   isTouchedDelay: 0.2
@@ -297,3 +297,4 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  healthProxy: {fileID: 0}
