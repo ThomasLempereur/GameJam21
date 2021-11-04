@@ -28,8 +28,10 @@ public class PlayerAttack : MonoBehaviour
 
         foreach (Collider2D enemy in hit)
         {
+
             Debug.Log(enemy);
             enemy.GetComponent<IEnemy>().EnemyDeath();
+
         }
     }
 
