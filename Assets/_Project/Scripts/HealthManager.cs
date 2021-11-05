@@ -15,7 +15,6 @@ public class HealthManager : SingletonBehaviour<HealthManager>, IHealthManager
         hearts = new List<GameObject>();
 
         DecreaseUp(hearts.Count);
-        actualHealth = 0;
 
         actualHealth = 0;
         for (int i = 0; i < numberHeart; i++)

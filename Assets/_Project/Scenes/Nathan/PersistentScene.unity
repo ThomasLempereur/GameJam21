@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistent: 1
-  scene: Lobby
+  scene: NathanScene
   OnEndGame:
     m_PersistentCalls:
       m_Calls:
