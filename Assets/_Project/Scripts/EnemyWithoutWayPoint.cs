@@ -50,7 +50,7 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
 
     public void SetTraget(GameObject _target)
     {
-        target = _target.transform;
+        target = _target?.transform;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
