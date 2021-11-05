@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position, collisionLayer);
-        Debug.Log("isGrounded  " + isGrounded);
         Move(x);
         if (canJump)
         {

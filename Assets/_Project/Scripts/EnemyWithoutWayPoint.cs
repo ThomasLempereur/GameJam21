@@ -13,7 +13,10 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private Animator animator;
     [SerializeField] private Transform target;
     [SerializeField] private int damagePassif;
+    [SerializeField] private SpriteRenderer spriteRendererEnemy;
     private Collision2D player;
+
+    bool pass;
 
     // Start is called before the first frame update
     public void Start()
@@ -26,6 +29,18 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
         if (target)
         {
             Vector3 dir = target.position - transform.position;
+            Vector3 reverseScale = transform.localScale;
+            if (dir.x > 0.1f && !pass)
+            {
+                reverseScale.x *= -1;
+                pass = true;
+            }
+            else if (dir.x < 0.1f && pass)
+            {
+                reverseScale.x *= -1;
+                pass = false;
+            }
+            transform.localScale = reverseScale;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         }
         if (player != null)

@@ -12,10 +12,14 @@ public class HealthManager : SingletonBehaviour<HealthManager>, IHealthManager
 
     public void Reset()
     {
-        hearts = new List<GameObject>();
-
-        DecreaseUp(hearts.Count);
-
+        if (hearts != null)
+        {
+            DecreaseUp(hearts.Count);
+        }
+        else
+        {
+            hearts = new List<GameObject>();
+        }
         actualHealth = 0;
         for (int i = 0; i < numberHeart; i++)
         {

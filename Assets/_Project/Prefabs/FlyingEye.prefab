@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 7831612138046497276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.38, y: -2.07, z: 6.069702}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_LocalScale: {x: -3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 7831612137861899312}
   - {fileID: 2291087029997103364}
@@ -320,3 +320,4 @@ MonoBehaviour:
   animator: {fileID: 7831612138046497278}
   target: {fileID: 0}
   damagePassif: 1
+  spriteRendererEnemy: {fileID: 7831612138046497265}
