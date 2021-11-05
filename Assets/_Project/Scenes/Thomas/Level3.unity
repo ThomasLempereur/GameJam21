@@ -62944,7 +62944,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804545737}
-  m_LocalRotation: {x: -0.07437623, y: 0.00000000428968, z: 3.1993638e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.074376225, y: -0.000000004289682, z: -3.199365e-10, w: 0.9972303}
   m_LocalPosition: {x: -52.49, y: -32.52, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -74546,7 +74546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106b91cc32890234a890200cb0a0c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
+  numberEnemy: 8
   wall: {fileID: 207576541}
 --- !u!1 &1687745479
 GameObject:
@@ -76639,7 +76639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052693179}
-  m_LocalRotation: {x: -0.07437623, y: 0.00000000428968, z: 3.1993638e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.074376225, y: -0.000000004289682, z: -3.199365e-10, w: 0.9972303}
   m_LocalPosition: {x: -52.49, y: -32.52, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
