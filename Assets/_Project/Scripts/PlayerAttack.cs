@@ -9,7 +9,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange;
+    [SerializeField] private float BigAttackRange;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private bool BigAttackUnlocked;
 
     void Update()
     {
@@ -17,6 +19,10 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             animator.SetTrigger("attack");
+        }
+        if (BigAttackUnlocked && Input.GetButtonDown("Fire2"))
+        {
+            animator.SetTrigger("bigAttack");
         }
 
     }
@@ -33,12 +39,27 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    private void BigAttack()
+    {
+        Collider2D[] hit = Physics2D.OverlapCircleAll(attackPoint.position, BigAttackRange, enemyLayer);
+
+        foreach (Collider2D enemy in hit)
+        {
+
+            enemy.GetComponent<IEnemy>().EnemyDeath();
+
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
         {
             return;
         }
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(attackPoint.position, BigAttackRange);
     }
 }
