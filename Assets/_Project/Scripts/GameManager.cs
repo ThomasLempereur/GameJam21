@@ -11,14 +11,31 @@ public class GameManager : SingletonBehaviour<GameManager>, IGameManager
     [SerializeField] private UnityEvent OnEndGame;
     [SerializeField] private UnityEvent OnStartgame;
 
+    private String currentScene = null;
+
     public void Quit()
     {
         Application.Quit();
     }
 
-    public void StartGame()
+    public void StartGame(String _scene)
     {
-        StartCoroutine(SwitchScene(scene, () => OnStartgame?.Invoke()));
+        Debug.Log("Scene " + _scene);
+        if (_scene != null)
+        {
+            currentScene = _scene;
+            Debug.Log("CurrentScene " + currentScene);
+            StartCoroutine(SwitchScene(_scene, () => OnStartgame?.Invoke()));
+        }
+        else
+        {
+            StartCoroutine(SwitchScene(scene, () => OnStartgame?.Invoke()));
+        }
+    }
+
+    public void ReloadThisScene()
+    {
+        StartGame(currentScene);
     }
 
     private IEnumerator SwitchScene(String newScene, Action callback = null)
@@ -36,7 +53,7 @@ public class GameManager : SingletonBehaviour<GameManager>, IGameManager
 
     private void Start()
     {
-        StartGame();
+        StartGame(null);
     }
 
     public void EndGame()

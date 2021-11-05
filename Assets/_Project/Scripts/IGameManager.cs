@@ -1,7 +1,7 @@
-public interface IGameManager 
+public interface IGameManager
 {
     void Quit();
-    void StartGame();
-    void EndGame(); 
+    void StartGame(string _scene);
+    void EndGame();
 
 }

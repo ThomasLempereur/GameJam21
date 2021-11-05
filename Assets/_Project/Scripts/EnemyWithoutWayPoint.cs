@@ -22,8 +22,16 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     // Update is called once per frame
     public void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        if (target)
+        {
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        }
+    }
+
+    public void SetTraget(GameObject _target)
+    {
+        target = _target.transform;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

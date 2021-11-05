@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 5638838006338389346}
   - component: {fileID: 5638838006338389375}
   - component: {fileID: 558379703102119612}
+  - component: {fileID: 5560061277714835249}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5638838006338389349}
   attackPoint: {fileID: 5638838005203504754}
-  attackRange: 1.5
+  attackRange: 1.7
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -270,7 +271,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 5638838006338389349}
   rb: {fileID: 5638838006338389345}
   speed: 500
-  jumpForce: 25000
+  jumpForce: 30000
   collisionLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -296,5 +297,30 @@ MonoBehaviour:
   objectDestroyed: {fileID: 5638838006338389348}
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5167658113002912029, guid: 675f54085a78f4a4a9db0898d28a3def, type: 3}
+        m_TargetAssemblyTypeName: GameManagerProxy, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   healthProxy: {fileID: 0}
+  rigidbody2D: {fileID: 5638838006338389345}
+--- !u!114 &5560061277714835249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638838006338389348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5026abbef1d5e4ab5f3c606ead6402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
