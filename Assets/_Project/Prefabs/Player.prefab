@@ -237,6 +237,7 @@ MonoBehaviour:
   animator: {fileID: 5638838006338389349}
   attackPoint: {fileID: 5638838005203504754}
   attackRange: 1.7
+  BigAttackRange: 2.7
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
