@@ -15,6 +15,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private int damagePassif;
     private Transform target;
     private int destPoint;
+    private Collision2D player;
 
     // Start is called before the first frame update
     public void Start()
@@ -25,7 +26,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     // Update is called once per frame
     public void Update()
     {
-        if (!animator.GetBool("isDead") && !animator.GetBool("isAttacking"))
+        if (!animator.GetBool("isDead") && !animator.GetBool("playerDetected"))
         {
             Vector3 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
@@ -41,18 +42,31 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
                 target = waypoints[destPoint];
             }
         }
+        if (player != null)
+        {
+            player.transform.GetComponent<PlayerHealth>().TakeDamage(damagePassif);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<PlayerHealth>().TakeDamage(damagePassif);
+            player = collision;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            player = null;
         }
     }
 
     public void EnemyDeath()
     {
+        Debug.Log("HERE");
         animator.SetBool("isDead", true);
         Destroy(enemyCollider2D);
         Destroy(hitCollider);

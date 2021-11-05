@@ -1,17 +1,15 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Chest : MonoBehaviour
 {
     [SerializeField] private Animator animatorChest;
- //   [SerializeField] private Text interactUI; 
-    
+    [SerializeField] private UIManagerProxy uIManagerProxy;
+
     private PlayerHealth player;
-    
+
     private bool isInRange;
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInRange)
@@ -19,12 +17,12 @@ public class Chest : MonoBehaviour
             OpenChest();
         }
     }
-    
+
     private void OpenChest()
     {
         if (animatorChest.GetBool("open") == false)
         {
-            Reward(); 
+            Reward();
             animatorChest.SetBool("open", true);
             GetComponent<BoxCollider2D>().enabled = false;
         }
@@ -33,7 +31,7 @@ public class Chest : MonoBehaviour
     private void Reward()
     {
         int malusOrBonus = Random.Range(0, 2);
-        
+
         if (malusOrBonus == 1)
         {
             player.TakeDamage(1);
@@ -48,7 +46,7 @@ public class Chest : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-           // interactUI.enabled = true; 
+            uIManagerProxy.ChangeVisibilityInteractUI(true);
             player = collision.GetComponent<PlayerHealth>();
             isInRange = true;
         }
@@ -58,8 +56,8 @@ public class Chest : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-           // interactUI.enabled = false; 
-            player = null; 
+            uIManagerProxy.ChangeVisibilityInteractUI(false);
+            player = null;
             isInRange = false;
         }
     }

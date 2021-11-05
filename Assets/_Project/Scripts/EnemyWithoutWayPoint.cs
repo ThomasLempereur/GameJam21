@@ -13,6 +13,7 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     [SerializeField] private Animator animator;
     [SerializeField] private Transform target;
     [SerializeField] private int damagePassif;
+    private Collision2D player;
 
     // Start is called before the first frame update
     public void Start()
@@ -22,15 +23,35 @@ public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
     // Update is called once per frame
     public void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        if (target)
+        {
+            Vector3 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        }
+        if (player != null)
+        {
+            player.transform.GetComponent<PlayerHealth>()?.TakeDamage(damagePassif);
+        }
+    }
+
+    public void SetTraget(GameObject _target)
+    {
+        target = _target.transform;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<PlayerHealth>().TakeDamage(damagePassif);
+            player = collision;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            player = null;
         }
     }
 

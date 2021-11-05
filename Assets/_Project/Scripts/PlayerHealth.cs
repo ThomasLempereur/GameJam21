@@ -11,13 +11,18 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject objectDestroyed;
     [SerializeField] private UnityEvent onDeath;
     [SerializeField] private HealthManagerProxy healthProxy;
+    [SerializeField] private Rigidbody2D rb;
 
     private int actualHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthProxy.Reset();
+        if (healthProxy)
+        {
+            healthProxy.Reset();
+            actualHealth = healthProxy.GetActualHearth();
+        }
         isTouched = false;
     }
 
@@ -32,11 +37,12 @@ public class PlayerHealth : MonoBehaviour
 
         actualHealth = healthProxy.DecreaseUp(numberLostHearts);
 
-        Debug.Log(actualHealth);
-
         if (actualHealth <= 0)
         {
             animator.SetBool("isDead", true);
+            Vector2 v = rb.velocity;
+            v.x = 0;
+            rb.velocity = v;
             StartCoroutine(WaitAndDestroy());
         }
         else

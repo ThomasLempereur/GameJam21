@@ -7,9 +7,9 @@ public class GameManagerProxy : MonoBehaviour, IGameManager
         GameManager.instance.Quit();
     }
 
-    public void StartGame()
+    public void StartGame(string _scene)
     {
-        GameManager.instance.StartGame();
+        GameManager.instance.StartGame(_scene);
     }
 
     public void EndGame()

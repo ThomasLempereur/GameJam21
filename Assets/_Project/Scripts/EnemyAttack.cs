@@ -7,16 +7,20 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float animationTime;
+    [SerializeField] private float attackDelay;
     [SerializeField] private int damageActif;
     private bool _inRange;
+    private bool canAttack;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        canAttack = true;
+    }
     void Update()
     {
-        if (_inRange)
+        if (_inRange && canAttack)
         {
-            StartCoroutine(WaitEndOfAttackAnimation());
+            animator.SetBool("isAttacking", true);
         }
         else
         {
@@ -27,24 +31,34 @@ public class EnemyAttack : MonoBehaviour
     public void setRange(bool inRange)
     {
         _inRange = inRange;
+        if (inRange)
+        {
+            animator.SetBool("playerDetected", true);
+        }
+        else
+        {
+            animator.SetBool("playerDetected", false);
+        }
+
+    }
+
+    public void ThrowAttack()
+    {
+        StartCoroutine(AttackDelay());
+    }
+
+    private IEnumerator AttackDelay()
+    {
+        canAttack = false;
+        Attack();
+        yield return new WaitForSeconds(attackDelay);
+        canAttack = true;
     }
 
     private void Attack()
     {
-        animator.SetBool("isAttacking", true);
-
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
-
-        hit.GetComponent<PlayerHealth>().TakeDamage(damageActif);
-    }
-
-    private IEnumerator WaitEndOfAttackAnimation()
-    {
-        while (_inRange)
-        {
-            Attack();
-            yield return new WaitForSeconds(animationTime);
-        }
+        hit?.GetComponent<PlayerHealth>().TakeDamage(damageActif);
     }
 
     private void OnDrawGizmosSelected()

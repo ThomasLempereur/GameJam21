@@ -208,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4795363162621231457, guid: 9897007568692d741a919b6299b5c2e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -257,7 +257,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  animationTime: 0.2
+  attackDelay: 1.5
+  damageActif: 1
 --- !u!60 &8665897638509260489
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -318,3 +319,4 @@ MonoBehaviour:
   hitCollider: {fileID: 7831612137861899315}
   animator: {fileID: 7831612138046497278}
   target: {fileID: 0}
+  damagePassif: 1

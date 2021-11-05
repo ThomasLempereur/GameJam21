@@ -17,4 +17,9 @@ public class HealthManagerProxy : MonoBehaviour, IHealthManager
     {
         return HealthManager.instance.DecreaseUp(numberLostHearts);
     }
+
+    public int GetActualHearth()
+    {
+        return HealthManager.instance.GetActualHearth();
+    }
 }
