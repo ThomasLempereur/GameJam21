@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Thomas/Lobby.unity
     guid: b0af614eb11c1e44188eb0e7e1de8d28
+  - enabled: 1
+    path: Assets/_Project/Scenes/Thomas/Level2.unity
+    guid: e7d4e12405c759a40bef9da6f38ab111
   m_configObjects: {}

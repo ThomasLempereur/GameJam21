@@ -298,7 +298,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  attackDelay: 3
+  attackDelay: 1.5
   damageActif: 1
 --- !u!114 &1588034147
 MonoBehaviour:
@@ -312,9 +312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44a9630962659148ba1086392002bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
   objectDestroyed: {fileID: 7113668544284867895}
   speed: 4
   enemyCollider2D: {fileID: 7113668543105085090}

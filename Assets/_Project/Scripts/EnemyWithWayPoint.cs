@@ -4,8 +4,6 @@ using UnityEngine.Events;
 
 public class EnemyWithWayPoint : MonoBehaviour, IEnemy
 {
-
-    [SerializeField] private UnityEvent onDeath;
     [SerializeField] private GameObject objectDestroyed;
     [SerializeField] private float speed;
     [SerializeField] private PolygonCollider2D enemyCollider2D;
@@ -75,7 +73,6 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     public IEnumerator WaitAndDestroy()
     {
         yield return new WaitForSeconds(1);
-        onDeath?.Invoke();
         Destroy(objectDestroyed);
     }
 }
