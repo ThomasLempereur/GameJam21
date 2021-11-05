@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position, collisionLayer);
         Move(x);
+        if (canJump && isGrounded)
+        {
+
+        }
         if (canJump)
         {
             Jump();
@@ -51,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(new Vector2(0, jumpForce));
+    }
+
+    private void JumpGrounded()
+    {
+        rb.AddForce(new Vector2(0, jumpForce / rb.mass));
     }
 
     private void Move(float x)
