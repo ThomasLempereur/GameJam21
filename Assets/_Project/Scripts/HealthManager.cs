@@ -77,4 +77,9 @@ public class HealthManager : SingletonBehaviour<HealthManager>, IHealthManager
         return actualHealth;
     }
 
+    public int GetMaximumHearth()
+    {
+        return numberHeart;
+    }
+
 }

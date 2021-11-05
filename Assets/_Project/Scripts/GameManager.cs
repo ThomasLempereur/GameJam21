@@ -10,8 +10,7 @@ public class GameManager : SingletonBehaviour<GameManager>, IGameManager
     [SerializeField] private String scene;
     [SerializeField] private UnityEvent OnEndGame;
     [SerializeField] private UnityEvent OnStartgame;
-    [SerializeField] private UnityEvent HideHealthBar;
-
+    [SerializeField] private UnityEvent HideForLobby;
     private String currentScene = null;
 
     public void Quit()
@@ -26,7 +25,7 @@ public class GameManager : SingletonBehaviour<GameManager>, IGameManager
             currentScene = _scene;
             if (_scene == "Lobby")
             {
-                StartCoroutine(SwitchScene(_scene, () => HideHealthBar?.Invoke()));
+                StartCoroutine(SwitchScene(_scene, () => HideForLobby?.Invoke()));
             }
             else
             {
@@ -35,7 +34,7 @@ public class GameManager : SingletonBehaviour<GameManager>, IGameManager
         }
         else
         {
-            StartCoroutine(SwitchScene(scene, () => HideHealthBar?.Invoke()));
+            StartCoroutine(SwitchScene(scene, () => HideForLobby?.Invoke()));
         }
     }
 

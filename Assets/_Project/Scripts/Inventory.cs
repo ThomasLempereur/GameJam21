@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI; 
 public class Inventory : MonoBehaviour
 {
 
-    [SerializeField] private int diamondCount; 
+    [SerializeField] private DiamondManagerProxy proxy; 
 
     public static Inventory instance; 
 
@@ -14,6 +12,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void AddDiamond(int count) {
-        diamondCount += count; 
+        proxy.AddDiamond(count); 
     }
+
 }
