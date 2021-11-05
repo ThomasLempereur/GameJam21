@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float BigAttackRange;
     [SerializeField] private LayerMask enemyLayer;
-    private bool BigAttackUnlocked = true;
+    [SerializeField] private bool BigAttackUnlocked;
 
     void Update()
     {
