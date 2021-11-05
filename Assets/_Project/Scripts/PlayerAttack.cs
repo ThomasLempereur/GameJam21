@@ -16,20 +16,18 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Attack();
+            animator.SetTrigger("attack");
         }
 
     }
 
     private void Attack()
     {
-        animator.SetTrigger("attack");
         Collider2D[] hit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         foreach (Collider2D enemy in hit)
         {
 
-            Debug.Log(enemy);
             enemy.GetComponent<IEnemy>().EnemyDeath();
 
         }

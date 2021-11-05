@@ -66,7 +66,6 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
 
     public void EnemyDeath()
     {
-        Debug.Log("HERE");
         animator.SetBool("isDead", true);
         Destroy(enemyCollider2D);
         Destroy(hitCollider);
