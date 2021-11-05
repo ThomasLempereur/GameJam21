@@ -1521,7 +1521,7 @@ MonoBehaviour:
   isPersistent: 1
   heartUp: {fileID: 5374591719684133071, guid: 77c867b8abe661a408e630eed170c3b0, type: 3}
   hearthBar: {fileID: 875250342}
-  numberHeart: 10
+  numberHeart: 3
 --- !u!4 &2089787355
 Transform:
   m_ObjectHideFlags: 0
