@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831612138046497276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.38, y: -2.07, z: 6.069702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 7831612137861899312}
@@ -310,9 +310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f3adbd8f7bc60498e5e11d0c21f770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
   objectDestroyed: {fileID: 7831612138009053057}
   speed: 2
   enemyCollider2D: {fileID: 8665897638509260489}
