@@ -22,4 +22,9 @@ public class HealthManagerProxy : MonoBehaviour, IHealthManager
     {
         return HealthManager.instance.GetActualHearth();
     }
+
+    public int GetMaximumHearth()
+    {
+        return HealthManager.instance.GetMaximumHearth();
+    }
 }

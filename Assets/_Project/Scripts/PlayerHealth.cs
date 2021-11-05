@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject objectDestroyed;
     [SerializeField] private UnityEvent onDeath;
     [SerializeField] private HealthManagerProxy healthProxy;
+    [SerializeField] private DiamondManagerProxy diamondManagerProxy;
     [SerializeField] private Rigidbody2D rb;
 
     private int actualHealth;
@@ -22,6 +23,10 @@ public class PlayerHealth : MonoBehaviour
         {
             healthProxy.Reset();
             actualHealth = healthProxy.GetActualHearth();
+        }
+        if (diamondManagerProxy)
+        {
+            diamondManagerProxy.Reset();
         }
         isTouched = false;
     }
