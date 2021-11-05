@@ -12,9 +12,9 @@ public class PickupObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isInRange) {
-            TakeObject(); 
-        }
+      //  if(Input.GetKeyDown(KeyCode.E) && isInRange) {
+       //     TakeObject(); 
+        //}
     }
 
     private void TakeObject() {
