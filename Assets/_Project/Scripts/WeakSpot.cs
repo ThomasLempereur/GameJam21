@@ -10,7 +10,7 @@ public class WeakSpot : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            graphic.GetComponent<Enemy>().EnemyDeath();
+            graphic.GetComponent<IEnemy>().EnemyDeath();
         }
     }
 }
