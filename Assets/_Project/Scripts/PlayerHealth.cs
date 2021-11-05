@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject objectDestroyed;
     [SerializeField] private UnityEvent onDeath;
     [SerializeField] private HealthManagerProxy healthProxy;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Rigidbody2D rb;
 
     private int actualHealth;
 
@@ -40,9 +40,9 @@ public class PlayerHealth : MonoBehaviour
         if (actualHealth <= 0)
         {
             animator.SetBool("isDead", true);
-            Vector2 v = rigidbody2D.velocity;
+            Vector2 v = rb.velocity;
             v.x = 0;
-            rigidbody2D.velocity = v;
+            rb.velocity = v;
             StartCoroutine(WaitAndDestroy());
         }
         else

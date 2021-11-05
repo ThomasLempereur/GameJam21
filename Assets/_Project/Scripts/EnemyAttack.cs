@@ -18,8 +18,6 @@ public class EnemyAttack : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("RANGE " + _inRange);
-        Debug.Log("ATTACK " + canAttack);
         if (_inRange && canAttack)
         {
             animator.SetBool("isAttacking", true);
@@ -33,6 +31,15 @@ public class EnemyAttack : MonoBehaviour
     public void setRange(bool inRange)
     {
         _inRange = inRange;
+        if (inRange)
+        {
+            animator.SetBool("playerDetected", true);
+        }
+        else
+        {
+            animator.SetBool("playerDetected", false);
+        }
+
     }
 
     public void ThrowAttack()

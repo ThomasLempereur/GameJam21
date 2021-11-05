@@ -311,7 +311,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   healthProxy: {fileID: 0}
-  rigidbody2D: {fileID: 5638838006338389345}
+  rb: {fileID: 5638838006338389345}
 --- !u!114 &5560061277714835249
 MonoBehaviour:
   m_ObjectHideFlags: 0
