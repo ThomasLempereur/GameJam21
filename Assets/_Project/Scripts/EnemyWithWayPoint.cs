@@ -46,6 +46,14 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
         }
     }
 
+    public void SetWayPoints(Transform[] _waypoints)
+    {
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            waypoints[i].position = _waypoints[i].position;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -65,6 +73,7 @@ public class EnemyWithWayPoint : MonoBehaviour, IEnemy
     public void EnemyDeath()
     {
         animator.SetBool("isDead", true);
+        objectDestroyed.GetComponentInChildren<EnemyArea>()?.incrementCountDeathArea();
         Destroy(enemyCollider2D);
         Destroy(hitCollider);
         StartCoroutine(WaitAndDestroy());

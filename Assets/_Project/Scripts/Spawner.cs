@@ -6,7 +6,6 @@ public class Spawner : MonoBehaviour
 {
 
     [SerializeField] GameObject enemySpawn;
-
     [SerializeField] GameObject player;
     [SerializeField] float delay;
 
@@ -17,18 +16,19 @@ public class Spawner : MonoBehaviour
     {
         if (!start)
         {
-            StartCoroutine(spawnEnemy());
+            StartCoroutine(SpawnEnemy());
             start = true;
         }
-
     }
-
-    public IEnumerator spawnEnemy()
+    public IEnumerator SpawnEnemy()
     {
         while (true)
         {
             GameObject enemy = Instantiate(enemySpawn, transform.position, transform.rotation);
-            enemy.GetComponentInChildren<EnemyWithoutWayPoint>().SetTraget(player);
+            if (player != null)
+            {
+                enemy.GetComponentInChildren<EnemyWithoutWayPoint>().SetTraget(player);
+            }
             yield return new WaitForSeconds(delay);
         }
     }
