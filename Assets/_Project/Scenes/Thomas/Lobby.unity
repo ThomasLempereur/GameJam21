@@ -203,6 +203,14 @@ PrefabInstance:
       value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 9205348848765383220, guid: 55133c51f2491b84f82bf66ae7c8d458, type: 3}
+      propertyPath: sceneLoad
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205348848765383220, guid: 55133c51f2491b84f82bf66ae7c8d458, type: 3}
+      propertyPath: currentPortal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205348848765383220, guid: 55133c51f2491b84f82bf66ae7c8d458, type: 3}
       propertyPath: uIManagerProxy
       value: 
       objectReference: {fileID: 1040035046}
@@ -210,6 +218,10 @@ PrefabInstance:
       propertyPath: gameManagerProxy
       value: 
       objectReference: {fileID: 202728298}
+    - target: {fileID: 9205348848765383220, guid: 55133c51f2491b84f82bf66ae7c8d458, type: 3}
+      propertyPath: starManagerProxy
+      value: 
+      objectReference: {fileID: 645483287}
     - target: {fileID: 9205348848765383221, guid: 55133c51f2491b84f82bf66ae7c8d458, type: 3}
       propertyPath: m_Name
       value: PortalLvl3
@@ -332,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285277415}
   m_LocalRotation: {x: -0.074376225, y: 0.000000004289682, z: 3.199365e-10, w: 0.9972303}
-  m_LocalPosition: {x: 124.3, y: -5.9, z: -10}
+  m_LocalPosition: {x: -3.1, y: -2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1827762434}
@@ -796,19 +808,6 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444959273}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_Tiles: {}
-  m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
-  m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-=======
   m_Tiles:
   - first: {x: 101, y: -7, z: 0}
     second:
@@ -1182,7 +1181,6 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: -7, z: 0}
   m_Size: {x: 112, y: 7, z: 1}
->>>>>>> 7ad1f76b021a231acb727956648cfd69ef8eb087
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1298,7 +1296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c01094134415d41b94cadbc6511349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   starManagerProxy: {fileID: 645483287}
   uIManagerProxy: {fileID: 1040035046}
   gameManagerProxy: {fileID: 202728298}
@@ -1308,11 +1305,6 @@ MonoBehaviour:
   currentScene: 0
   currentPortal: 2
   endLvlPortal: 0
-=======
-  uIManagerProxy: {fileID: 1040035046}
-  gameManagerProxy: {fileID: 202728298}
-  scene: Level2
->>>>>>> 7ad1f76b021a231acb727956648cfd69ef8eb087
 --- !u!61 &458147477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1326,7 +1318,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0001219511, y: -0.14075343}
+  m_Offset: {x: -0.0001219511, y: -0.037806153}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1337,9 +1329,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.748703, y: 0.7184931}
+  m_Size: {x: 0.748703, y: 0.9243877}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!1 &645483286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,10 +1372,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 7ad1f76b021a231acb727956648cfd69ef8eb087
 --- !u!1 &770349528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1475,7 @@ MonoBehaviour:
   gameManagerProxy: {fileID: 202728298}
   diamondManagerProxy: {fileID: 0}
   healthManagerProxy: {fileID: 0}
-  sceneLoad: ThomasScene
+  sceneLoad: Level1
   currentScene: 0
   currentPortal: 1
   endLvlPortal: 0
@@ -11426,7 +11415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840350473}
   m_LocalRotation: {x: -0.074376225, y: 0.000000004289682, z: 3.199365e-10, w: 0.9972303}
-  m_LocalPosition: {x: 124.3, y: -5.9, z: -10}
+  m_LocalPosition: {x: -3.1, y: -2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26178,11 +26167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5638838006338389347, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 124.3
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 5638838006338389347, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.9
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5638838006338389347, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
       propertyPath: m_LocalPosition.z
