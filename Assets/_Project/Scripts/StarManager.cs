@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +12,9 @@ public class StarManager : SingletonBehaviour<StarManager>, IStarManager
     [SerializeField] private int starsFromFirstLvl = 0;
     [SerializeField] private int starsFromSecondLvl = 0; 
     [SerializeField] private int starsFromThirdLvl = 0;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject healthManager;
+    private bool upgrade = false;
     
     public void ChangeVisibilityStarCounter(bool visibility)
     {
@@ -22,6 +23,12 @@ public class StarManager : SingletonBehaviour<StarManager>, IStarManager
 
     public int NbrStars() {
         starCount = starsFromFirstLvl + starsFromSecondLvl + starsFromThirdLvl;
+        Debug.Log(starCount);
+        if (!upgrade && starCount >= 2)
+        {
+            upgrade = true; 
+            healthManager.GetComponent<HealthManager>().SetMaximumHearth(4);
+        }
         return starCount;
     }
 

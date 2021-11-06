@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -11,8 +8,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float BigAttackRange;
     [SerializeField] private LayerMask enemyLayer;
-    [SerializeField] private bool BigAttackUnlocked;
-
+    [SerializeField] private StarManagerProxy starManagerProxy;
     void Update()
     {
 
@@ -20,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
         {
             animator.SetTrigger("attack");
         }
-        if (BigAttackUnlocked && Input.GetButtonDown("Fire2"))
+        if (starManagerProxy.NbrStars() >= 4 && Input.GetButtonDown("Fire2"))
         {
             animator.SetTrigger("bigAttack");
         }

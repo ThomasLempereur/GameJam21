@@ -66363,6 +66363,14 @@ PrefabInstance:
       propertyPath: proxy
       value: 
       objectReference: {fileID: 103974301}
+    - target: {fileID: 5638838006338389346, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
+      propertyPath: starManagerProxy
+      value: 
+      objectReference: {fileID: 1968897829}
+    - target: {fileID: 5638838006338389346, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
+      propertyPath: BigAttackUnlocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638838006338389347, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
       propertyPath: m_RootOrder
       value: 11

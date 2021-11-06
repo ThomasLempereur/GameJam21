@@ -82,4 +82,9 @@ public class HealthManager : SingletonBehaviour<HealthManager>, IHealthManager
         return numberHeart;
     }
 
+    public void SetMaximumHearth(int max)
+    {
+        numberHeart = max;
+    }
+
 }
