@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Nathan/NathanScene.unity
     guid: d56c28caafbc6a84c811df3f16b3fda2
   - enabled: 1
-    path: Assets/_Project/Scenes/Thomas/ThomasScene.unity
+    path: Assets/_Project/Scenes/Thomas/Level2.unity
     guid: 2b7ee7ec3076a9e4f85c6fd7e0bc7b87
   - enabled: 1
     path: Assets/_Project/Scenes/Thomas/Lobby.unity
     guid: b0af614eb11c1e44188eb0e7e1de8d28
   - enabled: 1
-    path: Assets/_Project/Scenes/Thomas/Level2.unity
+    path: Assets/_Project/Scenes/Thomas/Level1.unity
     guid: e7d4e12405c759a40bef9da6f38ab111
   - enabled: 1
     path: Assets/_Project/Scenes/Thomas/Level3.unity
