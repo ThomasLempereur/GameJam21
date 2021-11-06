@@ -9,6 +9,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float BigAttackRange;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private StarManagerProxy starManagerProxy;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip soundDamageTaken;
+    
     void Update()
     {
 
@@ -25,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
+        audioSource.PlayOneShot(soundDamageTaken);
         Collider2D[] hit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         foreach (Collider2D enemy in hit)
