@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IDiamondManager 
+public interface IDiamondManager
 {
 
     void Reset();
@@ -11,6 +7,6 @@ public interface IDiamondManager
 
     void AddDiamond(int count);
 
-    int GetDiamond(); 
+    int GetDiamond();
 
 }
