@@ -63495,7 +63495,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804545737}
-  m_LocalRotation: {x: -0.074376225, y: -0.000000004289682, z: -3.199365e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.07437623, y: 0.00000000428968, z: 3.1993638e-10, w: 0.9972303}
   m_LocalPosition: {x: -6.9, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -75922,6 +75922,14 @@ PrefabInstance:
       propertyPath: numberEnemy
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5638838006338389346, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
+      propertyPath: starManagerProxy
+      value: 
+      objectReference: {fileID: 320995874}
+    - target: {fileID: 5638838006338389346, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
+      propertyPath: BigAttackUnlocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638838006338389347, guid: 3d05047563440eb4ba9cb9f3dac5f4ad, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -78224,7 +78232,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052693179}
-  m_LocalRotation: {x: -0.074376225, y: -0.000000004289682, z: -3.199365e-10, w: 0.9972303}
+  m_LocalRotation: {x: -0.07437623, y: 0.00000000428968, z: 3.1993638e-10, w: 0.9972303}
   m_LocalPosition: {x: -6.9, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

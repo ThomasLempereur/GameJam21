@@ -7,11 +7,21 @@ public class UIManager : SingletonBehaviour<UIManager>, IUIManager
     [SerializeField] private GameObject starPortalLvl1;
     [SerializeField] private GameObject starPortalLvl2;
     [SerializeField] private GameObject starPortalLvl3;
+    [SerializeField] private Text papyrus; 
+
 
     public void ChangeVisibilityInteractUI(bool visibility)
     {
         interactUI.enabled = visibility;
     }
+
+    public void ChangeVisibilityPapyrus(bool visibility, string _papyrus, Color color)
+    {
+        papyrus.color = color; 
+        papyrus.text = _papyrus; 
+        papyrus.enabled = visibility;
+    }
+
 
     public void ChangeText(int missingStars){
         if(missingStars > 0){
