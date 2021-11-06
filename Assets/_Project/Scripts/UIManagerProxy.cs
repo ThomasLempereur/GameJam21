@@ -24,4 +24,11 @@ public class UIManagerProxy : MonoBehaviour, IUIManager
     public void ChangeText(int missingStars) {
         UIManager.instance.ChangeText(missingStars); 
     }
+
+    public void ChangeVisibilityPapyrus(bool visibility, string papyrus, Color color)
+    {
+        UIManager.instance.ChangeVisibilityPapyrus(visibility, papyrus, color); 
+    }
+
+
 }
