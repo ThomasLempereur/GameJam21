@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
-
 public class EnemyWithoutWayPoint : MonoBehaviour, IEnemy
 {
 

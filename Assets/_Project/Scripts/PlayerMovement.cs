@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using Debug = UnityEngine.Debug;
 using Input = UnityEngine.Input;
 using Physics2D = UnityEngine.Physics2D;
 using Time = UnityEngine.Time;

@@ -1,25 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DiamondManagerProxy : MonoBehaviour, IDiamondManager 
+public class DiamondManagerProxy : MonoBehaviour, IDiamondManager
 {
 
-    public void Reset() {
+    public void Reset()
+    {
         DiamondManager.instance.Reset();
     }
 
     public void ChangeVisibilityDiamondsCounter(bool visibility)
     {
-        DiamondManager.instance.ChangeVisibilityDiamondsCounter(visibility); 
+        DiamondManager.instance.ChangeVisibilityDiamondsCounter(visibility);
     }
 
-    public void AddDiamond(int count) {
-        DiamondManager.instance.AddDiamond(count);  
-    }   
+    public void AddDiamond(int count)
+    {
+        DiamondManager.instance.AddDiamond(count);
+    }
 
-    public int GetDiamond() {
-        return DiamondManager.instance.GetDiamond(); 
+    public int GetDiamond()
+    {
+        return DiamondManager.instance.GetDiamond();
     }
 
 }
